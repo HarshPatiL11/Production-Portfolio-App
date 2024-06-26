@@ -1,6 +1,5 @@
 import nodemailer from 'nodemailer';
 import mailgunTransport from 'nodemailer-mailgun-transport';
-
 import dotenv from 'dotenv';
 
 dotenv.config();
@@ -9,15 +8,12 @@ dotenv.config();
 console.log('Mailgun API Key:', process.env.MailAPI);
 console.log('Mailgun Domain:', process.env.MailDomain);
 
-
-
-
 // Transport Mail gun
 const transporter = nodemailer.createTransport(
     mailgunTransport({
         auth: {
-            api_key: process.env.Mailgun_API,
-            domain: process.env.Mailgun_Domain
+            api_key: process.env.MailAPI,
+            domain: process.env.MailDomain
         }
     })
 );

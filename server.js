@@ -43,7 +43,6 @@ app.get('/',(req,res)=>{
         
     })
 })
-connDB();
 
 app.listen(PORT,()=>{
     console.log(`Listening to port number ${PORT}`.bgGreen.red);
