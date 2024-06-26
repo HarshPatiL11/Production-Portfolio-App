@@ -3,7 +3,6 @@ import cors from "cors";
 import morgan from "morgan";
 import colors from "colors";
 import PortfolioRoutes from './Routes/PortfolioRoutes.js'
-import { connDB } from "./DB/DB.js";
 import path from 'path';
 import dotenv from 'dotenv';
 import { fileURLToPath } from 'url';
