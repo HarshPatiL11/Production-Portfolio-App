@@ -1,6 +1,14 @@
 import nodemailer from 'nodemailer';
 import mailgunTransport from 'nodemailer-mailgun-transport';
+
+import dotenv from 'dotenv';
+
+dotenv.config();
 // import sendgridtransport from 'nodemailer-sendgrid-transport';
+
+console.log('Mailgun API Key:', process.env.MailAPI);
+console.log('Mailgun Domain:', process.env.MailDomain);
+
 
 
 

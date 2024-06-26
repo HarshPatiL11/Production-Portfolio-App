@@ -2,10 +2,11 @@ import express from "express";
 import cors from "cors";
 import morgan from "morgan";
 import colors from "colors";
-import dotenv from "dotenv";
 import PortfolioRoutes from './Routes/PortfolioRoutes.js'
 import { connDB } from "./DB/DB.js";
 import path from 'path';
+import dotenv from 'dotenv';
+import { fileURLToPath } from 'url';
 
 dotenv.config();
 
@@ -17,6 +18,10 @@ const PORT = process.env.PORT || 8080;
 app.use(cors())  //cors connects to express
 app.use(morgan('dev')) // morgan linking to express  //dev means development mode
 app.use(express.json()) // to store data in the database in json format
+
+// Create __dirname
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 
 // static files access
